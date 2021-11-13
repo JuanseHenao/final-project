@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import '../assets/css/MainMenu.css';
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 class Arpertri extends Component {
 
@@ -14,9 +15,10 @@ class Arpertri extends Component {
             perimetro: 0,
             area: 0,
         }
+        this.calculate=this.calculate.bind(this)
     }
 
-    calculate(e){
+    async calculate(e){
         e.preventDefault()
         const url = "localhost:5000/api/arpertri"
         const config = {
@@ -30,6 +32,12 @@ class Arpertri extends Component {
                 'area': this.state.area,
                 'perimetro': this.state.perimetro
             }}
+
+        const response = await Axios(config)
+
+        const data = response.data
+        console.log(data)
+        this.setState({area:data.area,perimetro:data.perimetro})
     }
 
     render() {
