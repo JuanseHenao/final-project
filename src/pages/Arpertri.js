@@ -10,8 +10,7 @@ class Arpertri extends Component {
         this.state={
             lado1: 0,
             lado2: 0,
-            altura: 0,
-            base: 0,
+            lado3: 0,
             perimetro: 0,
             area: 0,
         }
@@ -20,24 +19,23 @@ class Arpertri extends Component {
 
     async calculate(e){
         e.preventDefault()
-        const url = "localhost:5000/api/arpertri"
+        const url = "https://finalprojectbackjuansehenao.herokuapp.com/api/arpertri"
         const config = {
             method: 'get',
             url: url,
             headers:{
-                'base': this.state.base,
-                'altura': this.state.altura,
                 'lado1': this.state.lado1,
                 'lado2': this.state.lado2,
+                'lado3': this.state.lado3,
                 'area': this.state.area,
-                'perimetro': this.state.perimetro
+                'perim': this.state.perimetro
             }}
 
         const response = await Axios(config)
 
         const data = response.data
         console.log(data)
-        this.setState({area:data.area,perimetro:data.perimetro})
+        this.setState({area:data.area,perimetro:data.perim})
     }
 
     render() {
@@ -56,16 +54,12 @@ class Arpertri extends Component {
                             <input type="number" onChange={e => this.setState({lado2:e.target.value})}/>
                         </div>
                         <div>
-                            <label>Base: </label>
-                            <input type="number" onChange={e => this.setState({base:e.target.value})}/>
-                        </div>
-                        <div>
-                            <label>Altura: </label>
-                            <input type="number" onChange={e => this.setState({altura:e.target.value})}/>
+                            <label>Lado 3: </label>
+                            <input type="number" onChange={e => this.setState({lado3:e.target.value})}/>
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>
-                    {this.state.perimetro > 0 && (
+                    {this.state.perimetro > -1 && (
                             <div>
                                 <h4>Perímetro: {this.state.perimetro}</h4>
                                 <h4>Área: {this.state.area}</h4>

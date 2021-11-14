@@ -1,8 +1,40 @@
 import React, {Component} from "react";
 import '../assets/css/MainMenu.css';
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 class Factorial extends Component {
+
+
+    constructor() {
+        super();
+        this.state={
+            radio: 0,
+            perimetro: 0,
+            area: 0,
+        }
+        this.calculate=this.calculate.bind(this)
+    }
+
+    async calculate(e){
+        e.preventDefault()
+        const url = "https://finalprojectbackjuansehenao.herokuapp.com/api/arpercir"
+        const config = {
+            method: 'get',
+            url: url,
+            headers:{
+                'radio': this.state.radio,
+                'area': this.state.area,
+                'perim': this.state.perimetro
+            }}
+
+        const response = await Axios(config)
+
+        const data = response.data
+        console.log(data)
+        this.setState({area:data.area,perimetro:data.perim})
+    }
+
     render() {
         return (
             <div className="container">
