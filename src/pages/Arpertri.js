@@ -61,7 +61,7 @@ class Arpertri extends Component {
                     </form>
                     {this.state.area > -1 && (
                             <div>
-                                <h4>Perímetro: {this.state.perim}</h4>
+                                <h4>Perímetro: {this.state.perimetro}</h4>
                                 <h4>Área: {this.state.area}</h4>
                             </div>
                     )}
