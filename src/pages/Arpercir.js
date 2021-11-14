@@ -37,13 +37,13 @@ class Arpercir extends Component {
     render() {
         return (
             <div className="container">
-                <div className="menuC">
+                <div className="triC">
                     <h1>Área y Perímetro de un círculo</h1>
                     <p>Ingrese el radio para conocer el área y el perímetro del círculo</p>
                     <form onSubmit={this.calculate}>
                         <div>
                             <label>Radio: </label>
-                            <input type="number" onChange={e => this.setState({radio:e.target.value})}/>
+                            <input type="number" min={1} required={true} onChange={e => this.setState({radio:e.target.value})}/>
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>

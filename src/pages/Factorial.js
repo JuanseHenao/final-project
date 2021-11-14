@@ -36,19 +36,19 @@ class Factorial extends Component {
     render() {
         return (
             <div className="container">
-                <div className="menuC">
+                <div className="fiboC">
                     <h1>Factorial</h1>
                     <p>Ingrese el número del que deseas conocer su factorial</p>
                     <form onSubmit={this.calculate}>
-                        <input type="number" onChange={e => this.setState({numero:e.target.value})}/>
-                        <button type="submit">Mostrar</button>
+                        <input type="number" max={170} required={true} min={0} onChange={e => this.setState({numero:e.target.value})}/>
+                        <button type="submit" className="butf">Mostrar</button>
                     </form>
                     {this.state.fact >= 0 && (
                         <div>
                             <h4>Resultado: {this.state.fact}</h4>
                         </div>
                     )}
-                    <Link to="/"><button>Volver al Menu</button></Link>
+                    <Link to="/"><button className="backb">Volver al Menu</button></Link>
                 </div>
             </div>
         );

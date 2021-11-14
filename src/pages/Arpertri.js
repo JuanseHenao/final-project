@@ -41,21 +41,21 @@ class Arpertri extends Component {
     render() {
         return (
             <div className="container">
-                <div className="menuC">
+                <div className="triC">
                     <h1>Área y Perímetro de un triángulo</h1>
                     <p>Ingrese los lados y la base para conocer el área y el perímetro del triángulo</p>
-                    <form onSubmit={this.calculate}>
+                    <form onSubmit={this.calculate} className="triform">
                         <div>
                             <label>Lado 1: </label>
-                            <input type="number" onChange={e => this.setState({lado1:e.target.value})}/>
+                            <input type="number" min={1} required={true} onChange={e => this.setState({lado1:e.target.value})}/>
                         </div>
                         <div>
                             <label>Lado 2: </label>
-                            <input type="number" onChange={e => this.setState({lado2:e.target.value})}/>
+                            <input type="number" min={1} required={true} onChange={e => this.setState({lado2:e.target.value})}/>
                         </div>
                         <div>
                             <label>Lado 3: </label>
-                            <input type="number" onChange={e => this.setState({lado3:e.target.value})}/>
+                            <input type="number" required={true} min={1} onChange={e => this.setState({lado3:e.target.value})}/>
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>
@@ -66,7 +66,7 @@ class Arpertri extends Component {
                             </div>
                     )}
 
-                    <Link to="/"><button>Volver al Menu</button></Link>
+                    <Link to="/"><button className="btnT">Volver al Menu</button></Link>
                 </div>
             </div>
         );

@@ -28,9 +28,119 @@
     color: aliceblue;
 }
 
+.menuC button {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: azure;
+    border: 0px;
+}
+
+.menuC button:hover {
+    background-color: white;
+    color: #282c34;
+    font-weight: bold;
+}
+
+.menuC input {
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+    padding: 5px;
+    border: 0px;
+}
+
+
+
 /*--------------------------------------------------------*/
 
 /*Factorial*/
 
+/*--------------------------------------------------------*/
 
+/*Fibonacci*/
+
+.fiboC{
+    height:fit-content;
+    width:400px;
+    margin:20px auto;
+    background-color:aquamarine;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.numsC {
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow-y: scroll;
+    height: 100px;
+    margin-top: 20px;
+}
+.numsC ul{
+    margin-left: -25px;
+}
+.numsLi {
+    list-style: none;
+}
+
+.butf {
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #282c34;
+    color: azure;
+    border: 0px;
+}
+
+.fiboC button:hover {
+    background-color: dodgerblue;
+}
+
+.fiboC input {
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+    padding: 5px;
+    border: 0px;
+}
+.backb {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: azure;
+    border: 0px;
+    margin-top: 20px;
+}
+
+/*--------------------------------------------------------*/
+
+/*Traingulo*/
+
+.triC {
+    height:fit-content;
+    width:400px;
+    margin:20px auto;
+    background-color:aquamarine;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.triC input {
+    border: 0px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.triC label {
+    font-weight: bold;
+}
+
+.triC button{
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: white;
+}
+.triC button:hover{
+    background-color: dodgerblue;
+}
 

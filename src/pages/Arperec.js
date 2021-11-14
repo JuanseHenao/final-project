@@ -38,17 +38,17 @@ class Arperec extends Component {
     render() {
         return (
             <div className="container">
-                <div className="menuC">
+                <div className="triC">
                     <h1>Área y Perímetro de un rectángulo</h1>
                     <p>Ingrese la base y la altura para conocer el área y el perímetro del rectángulo</p>
                     <form onSubmit={this.calculate}>
                         <div>
-                            <label>Base: </label>
-                            <input type="number" onChange={e => this.setState({base:e.target.value})}/>
+                            <label>Base : </label>
+                            <input type="number" required={true} min={1} onChange={e => this.setState({base:e.target.value})}/>
                         </div>
                         <div>
-                            <label>Altura: </label>
-                            <input type="number" onChange={e => this.setState({altura:e.target.value})}/>
+                            <label>Altura : </label>
+                            <input type="number" required={true} min={1} onChange={e => this.setState({altura:e.target.value})}/>
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>
