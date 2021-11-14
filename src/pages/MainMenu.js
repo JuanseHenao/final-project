@@ -15,6 +15,7 @@ class MainMenu extends Component {
                         <Link to="/arpercir"><button>Área y Perímetro de un círculo</button></Link>
                         <Link to="/arperec"><button>Área y Perímetro de un rectángulo</button></Link>
                     </div>
+                    <p>Realizado por: Juan Sebastián Henao</p>
                 </div>
             </div>
         );
