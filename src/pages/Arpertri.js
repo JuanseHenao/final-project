@@ -59,7 +59,7 @@ class Arpertri extends Component {
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>
-                    {this.state.area > -1 && (
+                    {this.state.area > 0 && (
                             <div>
                                 <h4>Perímetro: </h4>
                                 <h4>Área: {this.state.area}</h4>
