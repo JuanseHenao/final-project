@@ -43,7 +43,7 @@ class Arpercir extends Component {
                     <form onSubmit={this.calculate}>
                         <div>
                             <label>Radio: </label>
-                            <input type="number" min={1} required={true} onChange={e => this.setState({radio:e.target.value})}/>
+                            <input type="number" step={0.1} min={1} required={true} onChange={e => this.setState({radio:e.target.value})}/>
                         </div>
                         <button type="submit">Mostrar</button>
                     </form>
